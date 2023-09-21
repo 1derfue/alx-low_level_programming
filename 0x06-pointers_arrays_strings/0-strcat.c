@@ -1,30 +1,31 @@
 #include "main.h"
-
 /**
- * _strcat - Concatenate two strings and overwrite the null terminator.
- * @dest: Destination string.
- * @src: Source string.
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- * Return: A pointer to the resulting string (dest).
+ * Return: void
  */
-char *_strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
-	int dest_len = 0;
-	int i = 0;
+	int i;
+	int j;
 
-	/* Calculate the length of dest */
-	while (dest[dest_len] != '\0')
-		dest_len++;
-
-	/* Copy characters from src to dest */
-	while (src[i] != '\0')
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[dest_len + i] = src[i];
 		i++;
 	}
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
-	/* Add a new null-terminator at the end */
-	dest[dest_len + i] = '\0';
-
-	return dest;
+	dest[i] = '\0';
+	return (dest);
 }
+
+
