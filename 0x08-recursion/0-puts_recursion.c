@@ -10,10 +10,12 @@
 void _puts_recursion(char *s)
 {
     /* Base case: Check if the current character is the null terminator */
-    if (*s == '\0')
+   
+       	if (*s == '\0')
     {
         _putchar('\n'); /* Print a new line using _putchar */
-        return; /* End the recursion */
+       
+       	return; /* End the recursion */
     }
 
     _putchar(*s); /* Print the current character using _putchar */
